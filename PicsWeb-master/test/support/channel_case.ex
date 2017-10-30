@@ -30,6 +30,8 @@ defmodule PicsWeb.ChannelCase do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Pics.Repo)
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Pics.Repo, {:shared, self()})
+      Ecto.Adapters("shared")
+      setup demo
     end
     :ok
   end
