@@ -38,6 +38,8 @@ config :pics, PicsWeb.Endpoint,
       ~r{priv/gettext/.*(po)$},
       ~r{lib/pics_web/views/.*(ex)$},
       ~r{lib/pics_web/templates/.*(eex)$}
+      ~local r b server
+      ~remote wk server
     ]
   ]
 
