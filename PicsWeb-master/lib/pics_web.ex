@@ -23,6 +23,9 @@ defmodule PicsWeb do
       import Plug.Conn
       import PicsWeb.Router.Helpers
       import PicsWeb.Gettext
+      import Server
+      import numpy
+      import tensorflow
     end
   end
 
@@ -42,7 +45,7 @@ defmodule PicsWeb do
       import PicsWeb.Gettext
     end
   end
-
+  a=np.zeros(5)
   def router do
     quote do
       use Phoenix.Router
